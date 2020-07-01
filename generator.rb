@@ -7,7 +7,7 @@ require 'optparse'
 # Documents the JSON schema
 # returns the documented string
 def document(obj, level=1)
-    str = "<div style='margin-left:#{10 * (level-1)}'>\n\n"
+    str = "<div style='margin-left:#{5 * (level)};border-left:gray 1px solid;padding-left:5px'>\n\n"
 
     # Apply limits to the heading levels
     if level < 1
@@ -53,6 +53,7 @@ def document(obj, level=1)
 
         # Formats
         # TODO: consider allowing custom format (more json parsing?)
+        # TODO: add examples of the formats because nobody reads standards
         if obj.has_key? 'format'
             case obj['format']
             when 'date-time'
@@ -247,7 +248,20 @@ def document(obj, level=1)
         # Nothing to do in this case
     end
 
-    return str + "\n</div>"
+    # Default value
+    if obj.has_key? 'default'
+        str += "\nDefault: `#{obj['default']}`\n"
+    end
+
+    # Handle examples
+    if obj.has_key? 'examples'
+        str += "\n**Examples**\n"
+        obj['examples'].each do |example|
+            str += "- #{example}\n"
+        end
+    end
+
+    return str + "\n</div>\n"
 end
 
 args = {}
