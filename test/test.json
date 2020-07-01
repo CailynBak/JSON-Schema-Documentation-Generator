@@ -1,0 +1,114 @@
+{
+    "$schema": "http://json-schema.org/draft/2019-09/schema",
+    "$comment": "This schema should cover all of the possible cases that can be documented",
+    "title": "Test schema",
+    "description": "A schema that tests the documentation script",
+    "type": "object",
+    "properties": {
+        "someArray": {
+            "title": "Some array",
+            "description": "An array whose members are multiples of 16.",
+            "type": "array",
+            "minLength": 3,
+            "default": [
+                16,
+                32,
+                48,
+                64
+            ],
+            "items": {
+                "type": "number",
+                "multipleOf": 16
+            }
+        },
+        "aTuple": {
+            "title": "A tuple",
+            "description": "A tuple that also tests all the string formats",
+            "type": "array",
+            "items": [
+                {
+                    "title": "Title",
+                    "description": "This tuple element has a title",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                {
+                    "type": "string",
+                    "format": "time"
+                },
+                {
+                    "type": "string",
+                    "format": "date"
+                },
+                {
+                    "type": "string",
+                    "format": "email"
+                },
+                {
+                    "type": "string",
+                    "format": "idn-email"
+                },
+                {
+                    "type": "string",
+                    "format": "hostname"
+                },
+                {
+                    "type": "string",
+                    "format": "idn-hostname"
+                },
+                {
+                    "type": "string",
+                    "format": "ipv4"
+                },
+                {
+                    "type": "string",
+                    "format": "ipv6"
+                },
+                {
+                    "type": "string",
+                    "format": "uri"
+                },
+                {
+                    "type": "string",
+                    "format": "uri-reference"
+                },
+                {
+                    "type": "string",
+                    "format": "iri"
+                },
+                {
+                    "type": "string",
+                    "format": "iri-reference"
+                },
+                {
+                    "type": "string",
+                    "format": "uri-template"
+                },
+                {
+                    "type": "string",
+                    "format": "json-pointer"
+                },
+                {
+                    "type": "string",
+                    "format": "relative-json-pointer"
+                },
+                {
+                    "type": "string",
+                    "format": "regex"
+                }
+            ]
+        },
+        "badPassword": {
+            "title": "Password",
+            "description": "This is a password (but a bad one)",
+            "type": "string",
+            "minLength": 6,
+            "maxLength": 12,
+            "pattern": "[a-zA-Z]*[1-9]+[a-zA-Z]*",
+            "examples": [
+                "password123",
+                "hunter2"
+            ]
+        }
+    }
+}
