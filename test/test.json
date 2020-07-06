@@ -104,7 +104,7 @@
             "type": "string",
             "minLength": 6,
             "maxLength": 12,
-            "pattern": "[a-zA-Z]*[1-9]+[a-zA-Z]*",
+            "pattern": "[a-zA-Z]+[1-9]+[a-zA-Z]*",
             "examples": [
                 "password123",
                 "hunter2"

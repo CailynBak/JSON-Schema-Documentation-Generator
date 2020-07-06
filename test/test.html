@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test schema</title>
+<style>
+div {
+    border-left: #AAAAAA 2px solid;
+    padding-left: 7px;
+}
+code {
+    background-color: #CCCCCC;
+    border-radius: 2px;
+    padding: 2px;
+}
+li {
+    list-style-type: '\2013  ';
+}
+</style>
+</head>
+<body>
+<div style='margin-left:5px;'>
+
+<h1>Test schema</h1>
+<p>A schema that tests the documentation script</p>
+<p>type: <code>object</code></p>
+<b><code>someArray</code>:</b>
+<div style='margin-left:10px;'>
+
+<h2>Some array</h2>
+<p>An array whose members are multiples of 16.</p>
+<p>type: <code>array</code></p><p>Must be longer than 3 items</p>
+
+<b>Elements:</b>
+<div style='margin-left:15px;'>
+
+<p>type: <code>number</code></p><p>Restrictions:</p>
+<ul>
+<li>Number must be a multiple of 16</li>
+</ul>
+
+</div>
+</ul>
+Default: <code>[16, 32, 48, 64]</code>
+
+</div>
+
+<b><code>aTuple</code>:</b>
+<div style='margin-left:10px;'>
+
+<h2>A tuple</h2>
+<p>A tuple that also tests all the string formats</p>
+<p>type: <code>array</code></p>
+<b>Element 0:</b>
+<div style='margin-left:15px;'>
+
+<h3>Title</h3>
+<p>This tuple element has a title</p>
+<p>type: <code>string</code></p><p>Restrictions:</p>
+<ul>
+<li>Must be an ISO-8601 formatted date and time (<code>YYYY-MM-DDThh:mm:ss+hh:mm</code>)</li>
+
+</div>
+
+<b>Element 1:</b>
+<div style='margin-left:15px;'>
+
+<p>type: <code>string</code></p><p>Restrictions:</p>
+<ul>
+<li>Must be an ISO-8601 formatted time (<code>hh:mm:ss+hh:mm</code>)</li>
+
+</div>
+
+<b>Element 2:</b>
+<div style='margin-left:15px;'>
+
+<p>type: <code>string</code></p><p>Restrictions:</p>
+<ul>
+<li>Must be an ISO-8601 formatted date (<code>YYYY-MM-DD</code>)</li>
+
+</div>
+
+<b>Element 3:</b>
+<div style='margin-left:15px;'>
+
+<p>type: <code>string</code></p><p>Restrictions:</p>
+<ul>
+<li>Must be an email address compliant with <a href='https://tools.ietf.org/html/rfc5322#section-3.4.1'>RFC5311&sect;3.4.1</a>'</li>
+
+</div>
+
+<b>Element 4:</b>
+<div style='margin-left:15px;'>
+
+<p>type: <code>string</code></p><p>Restrictions:</p>
+<ul>
+<li>Must be an internationalized email address compliant with <a href='https://tools.ietf.org/html/rfc6531'>RFC6531</a></li>
+
+</div>
+
+<b>Element 5:</b>
+<div style='margin-left:15px;'>
+
+<p>type: <code>string</code></p><p>Restrictions:</p>
+<ul>
+<li>Must be an internet host name compliant with <a href='https://tools.ietf.org/html/rfc1034#section-3.1'>RFC1034&sect;3.1</a></li>
+
+</div>
+
+<b>Element 6:</b>
+<div style='margin-left:15px;'>
+
+<p>type: <code>string</code></p><p>Restrictions:</p>
+<ul>
+<li>Must be an internationalized internet host name, compliant with <a href='https://tools.ietf.org/html/rfc5890#section-2.3.2.3'>RFC5890&sect;2.3.2.3</a></li>
+
+</div>
+
+<b>Element 7:</b>
+<div style='margin-left:15px;'>
+
+<p>type: <code>string</code></p><p>Restrictions:</p>
+<ul>
+<li>Must be an IPv4 address <a href='https://tools.ietf.org/html/rfc2673#section-3.2'>RFC2673&sect;3.2</a></li>
+
+</div>
+
+<b>Element 8:</b>
+<div style='margin-left:15px;'>
+
+<p>type: <code>string</code></p><p>Restrictions:</p>
+<ul>
+<li>Must be an IPv6 address (<a href='https://tools.ietf.org/html/rfc2373#section-2.2'>RFC2373&sect;2.2</a>)</li>
+
+</div>
+
+<b>Element 9:</b>
+<div style='margin-left:15px;'>
+
+<p>type: <code>string</code></p><p>Restrictions:</p>
+<ul>
+<li>Must be an <a href='https://tools.ietf.org/html/rfc3986'>RFC3986</a>-compliant URI</li>
+
+</div>
+
+<b>Element 10:</b>
+<div style='margin-left:15px;'>
+
+<p>type: <code>string</code></p><p>Restrictions:</p>
+<ul>
+<li>Must be a URI reference according to <a href='https://tools.ietf.org/html/rfc3986#section-4.1'>RFC3986&sect;4.1</a></li>
+
+</div>
+
+<b>Element 11:</b>
+<div style='margin-left:15px;'>
+
+<p>type: <code>string</code></p><p>Restrictions:</p>
+<ul>
+<li>Must be an <a href='https://tools.ietf.org/html/rfc3987'>RFC3987</a>-compliant internationalized URI</li>
+
+</div>
+
+<b>Element 12:</b>
+<div style='margin-left:15px;'>
+
+<p>type: <code>string</code></p><p>Restrictions:</p>
+<ul>
+<li>Must be an <a href='https://tools.ietf.org/html/rfc3987'>RFC3987</a>-compliant internationalized URI reference</li>
+
+</div>
+
+<b>Element 13:</b>
+<div style='margin-left:15px;'>
+
+<p>type: <code>string</code></p><p>Restrictions:</p>
+<ul>
+<li>Must be an <a href='https://tools.ietf.org/html/rfc6570'>RFC6570</a>-compliant URI template</li>
+
+</div>
+
+<b>Element 14:</b>
+<div style='margin-left:15px;'>
+
+<p>type: <code>string</code></p><p>Restrictions:</p>
+<ul>
+<li>Must be a JSON pointer as specified in <a href='https://tools.ietf.org/html/rfc6901'>RFC6901</a></li>
+
+</div>
+
+<b>Element 15:</b>
+<div style='margin-left:15px;'>
+
+<p>type: <code>string</code></p><p>Restrictions:</p>
+<ul>
+<li>Must be a <a href='https://tools.ietf.org/html/draft-handrews-relative-json-pointer-01'>relative JSON pointer</a></li>
+
+</div>
+
+<b>Element 16:</b>
+<div style='margin-left:15px;'>
+
+<p>type: <code>string</code></p><p>Restrictions:</p>
+<ul>
+<li>Must be a regular expression, following the <a href='https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf'>ECMA 262</a> dialect</li>
+
+</div>
+</ul>
+</div>
+
+<b><code>badPassword</code>:</b>
+<div style='margin-left:10px;'>
+
+<h2>Password</h2>
+<p>This is a password (but a bad one)</p>
+<p>type: <code>string</code></p><p>Restrictions:</p>
+<ul>
+<li>Must be longer than 6 characters and shorter than 12 characters</li>
+<li>Must match the regular expression <code>/[a-zA-Z]+[1-9]+[a-zA-Z]*/</code></li>
+<p>Examples:</p>
+<ul>
+<li><code>password123</code></li>
+<li><code>hunter2</code></li>
+</ul>
+</div>
+
+</div>
+
+</body>
+</html>
